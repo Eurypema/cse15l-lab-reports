@@ -5,7 +5,7 @@
 [Link][2]
 ⋮
 [1]: http://b.org
-[2]: http://b.org
+[2]: http://4ch.org
 
 [Link](https://commonmark.org/help/)
 
