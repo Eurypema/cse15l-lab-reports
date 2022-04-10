@@ -117,3 +117,6 @@ Allow it to be supposed that one had made a change to a file and would like to s
 scp WhereAmI.java cs15lsp22afl@ieng6.ucsd.edu:~/; ssh cs15lsp22afl@ieng6.ucsd.edu "ls"
 ```
 and, in the terminal on one's local machine, press Ctrl+Shift+v to paste. This does the work of three commands, saving thus three enter strokes and a couple of up-strokes worth of time.
+
+The following is the obtained output:
+![image](https://user-images.githubusercontent.com/103284133/162601480-612333c0-c36e-46c8-aa1d-abd6260f2f73.png)
