@@ -112,4 +112,8 @@ It may be noted that:
 1. One can use semicolons to run multiple commands on the same line in most terminals.
 2. One can write a command in quotes at the end of an ssh command to directly run it on the remote machine.
 
-Allow it to be supposed that one had made a change to a file and would like to save it to the remote machine. Then
+Allow it to be supposed that one had made a change to a file and would like to save it to the remote machine. Then Ctrl+C the following line:
+```
+scp WhereAmI.java cs15lsp22afl@ieng6.ucsd.edu:~/; ssh cs15lsp22afl@ieng6.ucsd.edu "ls"
+```
+and, in the terminal on one's local machine, press Ctrl+Shift+v to paste. This does the work of three commands, saving thus three enter strokes and a couple of up-strokes worth of time.
