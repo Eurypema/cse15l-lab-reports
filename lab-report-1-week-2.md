@@ -60,3 +60,56 @@ $$ cat /home/linux/ieng6/cs15lsp22/public/hello.txt
 ```
 but these require special permissions be granted.
 
+## Step 4: Moving Files Over SSH
+
+Create a file WhereAmI.java with contents that follow:
+```
+class WhereAmI {
+  public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
+  }
+}
+```
+The following command then copies WhereAmI to a specified remote computer:
+```
+$ scp WhereAmI.java cs15lsp22zz@ieng6.ucsd.edu:~/
+```
+where, as again, zz is a placeholder for whatever letter combination of the remote computer that you wish to save it to. The result should look something like this:
+
+![image](https://user-images.githubusercontent.com/103284133/162600461-c59b1b7f-d43d-4c3f-834c-8c7fd1a22997.png)
+
+Entering the command 'exit' logs out of the remote computer.
+
+## Step 6: 
+
+On one's local machine, enter the following command:
+```
+$ ssh-keygen -t ed25519
+```
+When prompted on where to save the RSA key pair, enter /Users/XX/.ssh/id_rsa, where XX refers to one's username.
+
+Afterwards, when prompted for a passphrase, enter none. Something like this should appear:
+
+![image](https://user-images.githubusercontent.com/103284133/162600603-db35b2ae-dece-410c-a475-2815de77b9cf.png)
+
+Going onto the remote machine, enter the following command:
+```
+$ mkdir .ssh
+```
+
+On one's local machine, enter the command
+```
+$ scp /Users/gordo/.ssh/id_rsa.pub cs15lsp22afl@ieng6.ucsd.edu:~/.ssh/authorized_keys
+```
+Enter the password when prompted, and now log into the remote machine (logout first if one has not). One will discover now that no password needs be provided now when accessing that remote machine.
+
+## Step 7: Making Remote Running Even More Pleasant
+
+It may be noted that:
+1. One can use semicolons to run multiple commands on the same line in most terminals.
+2. One can write a command in quotes at the end of an ssh command to directly run it on the remote machine.
+
+Allow it to be supposed that one had made a change to a file and would like to save it to the remote machine. Then
