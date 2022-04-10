@@ -1,1 +1,62 @@
-![Image](https://github.com/Eurypema/cse15l-lab-reports/blob/main/Capture2.PNG?raw=true)
+# Lab Report 1
+
+## Step 1: Installing VCode
+
+Go to the Visual Studio Code website and follow the instructions to download and install it on your computer: 
+[Link](https://code.visualstudio.com/)
+
+Once one installs VSCode (downloading the installer as per one's OS), the following should pop up:
+
+![image](https://user-images.githubusercontent.com/103284133/162596646-427d4b10-aa60-4a0f-82af-1b56b8fe0b54.png)
+
+## Step 2: Connecting Remotely
+
+Install OpenSSH if one is on Windows first:
+[Link](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse)
+
+First look up one's course-specific account for CSE15L here:
+[Link](https://sdacs.ucsd.edu/~icc/index.php)
+
+Now open a terminal in VSCode. In it, enter
+```
+$$ ssh cs15lsp22zz@ieng6.ucsd.edu
+```
+where zz stands for the letter combination for one's course-specific account.
+
+The first time one does so, this prompt should appear:
+
+![image](https://user-images.githubusercontent.com/103284133/162596888-ed1ee703-f21a-4112-8591-4444f44de481.png)
+
+Enter 'yes'. After this, one shall be prompted for the password. Enter it as per usual and the following should be observed:
+
+![image](https://user-images.githubusercontent.com/103284133/162596918-3a123efc-acae-4429-90a7-d52240031b57.png)
+
+## Step 3: Using Commands
+
+The commands
+```
+$$ cd X
+```
+and
+```
+$$ ls
+```
+change the directory to X and list the contents of the directory, as so:
+
+![image](https://user-images.githubusercontent.com/103284133/162597372-6af844fb-4aa6-4da2-b193-5fc220ef7ffd.png)
+
+Adding a tilda after cd returns one to the home directory. Adding the modifiers -l, -a, and -t after ls produces the following results:
+
+![image](https://user-images.githubusercontent.com/103284133/162597468-37616279-c31d-47e1-ae39-099966ca417c.png)
+
+Combining these modifiers produces the following:
+
+![image](https://user-images.githubusercontent.com/103284133/162597481-3a73cb97-e719-416a-b43f-800f18041f07.png)
+
+There are other commands to try, such as 
+```
+$$ cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/
+$$ cat /home/linux/ieng6/cs15lsp22/public/hello.txt
+```
+but these require special permissions be granted.
+
