@@ -4,11 +4,11 @@
 -------
 With no arguments:
 
-If the directory was not changed, nothing happens.
+If the directory was not changed, i.e. one is still in the default directory, nothing happens. Leaving it blank means cd changes directory to home, which would be the default directory.
 
 ![image](https://github.com/Eurypema/cse15l-lab-reports/assets/103284133/b74ba093-93d6-49df-836c-d3fc904e532e)
 
-If cd was already used with another directory, cd without arguments returns directory to home:
+If cd was already used with another directory (in this cace lecture1), cd without arguments returns directory to home:
 
 ![image](https://github.com/Eurypema/cse15l-lab-reports/assets/103284133/c6f5ecb7-3f2a-44a2-b229-d41f5017dcd7)
 
@@ -26,6 +26,10 @@ Error message since directory is required.
 
 ## ls
 -------
+
+All code from here on out has the default directory. 
+
+
 With no arguments:
 
 The contents of the current set directory is listed.
@@ -48,7 +52,7 @@ The path of the specified file is listed.
 -------
 With no arguments:
 
-The terminal becomes bugged. Pressing CTRL-C exits the terminal.
+The terminal becomes bugged as cat is meant to print. It is not possible to enter more commands. Pressing CTRL-C fixes the terminal.
 
 ![image](https://github.com/Eurypema/cse15l-lab-reports/assets/103284133/f2c1367a-faf7-453d-a8a9-386f40a91d1b)
 
