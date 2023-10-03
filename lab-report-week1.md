@@ -1,6 +1,6 @@
-#Lab Report Week 1
+# Lab Report Week 1
 =======
-##cd
+## cd
 -------
 With no arguments:
 
@@ -24,7 +24,7 @@ Error message since directory is required.
 
 ![image](https://github.com/Eurypema/cse15l-lab-reports/assets/103284133/0eb9fdff-94ff-4428-8efb-f1987ff4f29b)
 
-##ls
+## ls
 -------
 With no arguments:
 
@@ -44,7 +44,7 @@ The path of the specified file is listed.
 
 ![image](https://github.com/Eurypema/cse15l-lab-reports/assets/103284133/59b89d34-172b-48ee-87a9-d897dc43f687)
 
-##cat
+## cat
 -------
 With no arguments:
 
