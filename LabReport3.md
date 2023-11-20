@@ -1,4 +1,7 @@
-###Part 2: The 'less' Command
+##Part 1: Bugs
+
+
+##Part 2: The 'less' Command
 
 ## 1. Display Line Numbers (`-N` option)
 Display line numbers in the `less` command output.
