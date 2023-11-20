@@ -1,5 +1,60 @@
 ##Part 1: Bugs
 
+Given the following buggy code:
+
+
+`public static int[] reversed(int[] arr) {
+    int length = arr.length;
+    int[] newArray = new int[length];
+    for (int i = 0; i < length; i++) {
+        newArray[i] = arr[length - i - 1];
+    }
+    return newArray;
+  }`
+
+A failure-inducing input is as follows:
+
+`import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+public class ReversedArrayTest {
+    @Test
+    public void testReversedFailure() {
+        int[] input = new int[]{1, 2, 3, 4, 5};
+        int[] expected = new int[]{5, 4, 3, 2, 1};
+        assertArrayEquals(expected, ReversedArray.reversed(input));
+    }
+}`
+
+
+Likewise, a non-failure-inducing input would be:
+
+
+`import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+public class ReversedArrayTest {
+    @Test
+    public void testReversedSuccess() {
+        int[] input = new int[]{};
+        int[] expected = new int[]{};
+        assertArrayEquals(expected, ReversedArray.reversed(input));
+    }
+}`
+
+
+After the fix, the code looks so:
+
+
+`public static int[] reversed(int[] arr) {
+    int length = arr.length;
+    int[] newArray = new int[length];
+    for (int i = 0; i < length; i++) {
+        newArray[i] = arr[length - i - 1];
+    }
+    return newArray;
+}`
+
+
+In the original code, the logic is actually correct for reversing the array. The failure-inducing test case should work as expected, reversing the order of the elements in the array. If there is a failure, it might be due to a mistake in the testing setup or the way the ReversedArray.reversed method is being called. The non-failure-inducing input (an empty array) is correctly handled in both the original and fixed versions, as the loop simply doesn't execute when the array length is zero.
 
 ##Part 2: The 'less' Command
 
